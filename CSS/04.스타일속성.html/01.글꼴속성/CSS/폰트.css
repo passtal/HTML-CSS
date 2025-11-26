@@ -1,0 +1,24 @@
+:root {
+    /* 변수 선언 */
+    --main-font: 'Roboto', sans-serif;
+    --highlight-font: 'Georgia', serif;
+}
+
+html {
+    font-family: var(--main-font);
+    font-size: 14px;
+}
+
+h1, h2, .highlight {
+    font-family: var(--highlight-font);
+}
+
+h1 {
+    /* rem : root 요소의 크기에 배율로 적용 */
+    font-size: 2rem;
+}
+
+h2 {
+    /* em : 부모 요소의 크기에 배율로 적용 */
+    font-size: 1.5em;
+}

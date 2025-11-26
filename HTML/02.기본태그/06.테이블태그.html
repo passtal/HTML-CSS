@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블 태그</title>
+</head>
+<body>
+    <h1>카페 메뉴판</h1>
+    <table border="1">
+        <tr>
+            <th width="200">메뉴</th>
+            <th width="100">가격</th>
+            <th width="100">종류</th>
+        </tr>
+        <!-- (tr>(td*3))*3 -->
+        <tr>
+            <td align="center">아메리카노</td>
+            <td align="center">2,000</td>
+            <td align="center">hot/ice</td>
+        </tr>
+        <tr>
+            <td align="center">카페라떼</td>
+            <td align="center">2,500</td>
+            <td align="center">hot/ice</td>
+        </tr>
+        <tr>
+            <td align="center">아이스티</td>
+            <td align="center">3,000</td>
+            <td align="center">ice</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h1>월별 수입</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>월</th>
+                <th>수입</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <!-- (tr>td*2)*3 -->
+            <tr>
+                <td>10월</td>
+                <td>1,000,000</td>
+            </tr>
+            <tr>
+                <td>11월</td>
+                <td>1,500,000</td>
+            </tr>
+            <tr>
+                <td>12월</td>
+                <td>2,000,000</td>
+            </tr>
+            
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>합계</td>
+                <td>4,500,000</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <hr>
+
+    <h1>11월 달력</h1>
+    <table>
+        <colgroup>
+            <col style="background-color: red">
+            <col span="5" style="background-color: whitesmoke;">
+            <col style="background-color: rgba(23, 73, 211, 0.753);">
+        </colgroup>
+        <tr>
+            <td>일</td>
+            <td>월</td>
+            <td>화</td>
+            <td>수</td>
+            <td>목</td>
+            <td>금</td> 
+            <td>토</td>
+        </tr>
+        <!-- (tr>td{$}*7)*5 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>17</td>
+            <td>18</td>
+            <td>19</td>
+            <td>20</td>
+            <td>21</td>
+            <td>22</td>
+        </tr>
+        <tr>
+            <td>23</td>
+            <td>24</td>
+            <td>25</td>
+            <td>26</td>
+            <td>27</td>
+            <td>28</td>
+            <td>29</td>
+        </tr>
+        <tr>
+            <td>30</td>
+        </tr>
+    </table>
+    
+</body>
+</html>

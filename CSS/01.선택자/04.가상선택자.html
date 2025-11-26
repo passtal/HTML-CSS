@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상 선택자</title>
+
+    <style>
+        a:link {
+            /* 방문하지 않은 링크 */
+            color: blue;
+            text-decoration: none;
+        }
+        a:visited {
+            /* 방문한 링크 */
+            color: coral;
+        }
+        a:hover {
+            /* 커서를 링크에 올렸을 때 */
+            color: red;
+        }
+        a:active {
+            /* 누르고 있을 때 */
+            color: royalblue;
+        }
+        a:focus {
+            /* 포커스되었을 때 */
+            color: black;
+        }
+
+        p::first-line {
+            font-weight: bold;
+            color: darkblue;
+        }
+
+        p::first-letter {
+            font-size: 2em;
+            color: #ff4500;
+        }
+
+        .box::before {
+            content: '★';
+            color: green;
+            font-size: 1.2em;
+        }
+
+        .box::after {
+            content: '★';
+            color: green;
+            font-size: 1.2em;
+        }
+
+        p::lang(en) {font-style: italic;}
+        p::lang(ko) {text-decoration: underline;}
+    </style>
+</head>
+<body>
+    <h1>가상 선택자</h1>
+    <a href="http://test.com">링크 태그입니다.</a>
+    <br>
+    <a href="">링크 태그입니다.</a>
+    <br><br>
+
+    <label for="name">이름</label>
+    <input type="text" name="name" placeholder="이름을 입력하세요">
+    <br><br>
+
+    <p>
+        첫글자 첫 번째 문장 <br>
+        두 번째 문장
+        세 번째 문장
+    </p>
+
+    <div class="box">
+        :before
+        컨텐츠
+        :after
+    </div>
+
+    <p lang="en">English</p>
+    <p lang="ko">Korean</p>
+</body>
+</html>
