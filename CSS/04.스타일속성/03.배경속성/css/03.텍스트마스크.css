@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.background {
+    background-color: burlywood;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;   /* 고정 배경 */
+    height: 600px;
+    margin: 800px auto;
+
+    /* 텍스트 스타일 */
+    font-size: 200px;
+    color: transparent;
+    margin: 0 auto;
+    text-align: center;
+
+    /* 텍스트 마스크 */
+    /* 1번 이미지 */
+    background-image: url(../img/background.jpg);
+    background-clip: text;
+
+    /* 2번 그라데이션 */
+    /* background-color: rgb(71, 171, 204); */
+    /* background: linear-gradient(to bottom right, red, blue) */
+    /* background-clip: text; */
+    
+    
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반응형 텍스트 예시</title>
+  <style>
+    h1 {
+      font-size: clamp(12px, 5vw, 60px); /* 반응형 텍스트 */
+      text-align: center;
+    }
+    
+    .point {
+	    font-size: calc(1rem + 2vw); /* 기본 글꼴 크기에서 뷰포트 너비의 2% 추가 */
+    }
+
+    p {
+      font-size: 1.5rem; /* 상대 단위 사용 */
+    }
+
+    @media (max-width: 768px) {
+      p {
+        font-size: 1.25rem; /* 작은 화면에서 텍스트 크기 축소 */
+      }
+    }
+
+    @media (max-width: 480px) {
+      p {
+        font-size: 1rem; /* 더 작은 화면에서 텍스트 크기 축소 */
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>반응형 텍스트 예시</h1>
+  <h3 class="point">포인트 텍스트입니다.</h3>
+  <p>이 텍스트는 화면 크기에 따라 크기가 조정됩니다.</p>
+</body>
+</html>
