@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background-color: lightblue;
+    z-index: 200;
+}
+
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    background-color: coral;
+    z-index: 10;
+    /* 
+      z-index : 보여지는 레이어의 순서
+                값이 클수록 위에 표시됨
+    */
+}
+
+.box2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* transform: translate(-50%, -50%) */
+    width: 200px;
+    height: 200px;
+    background-color: cornflowerblue;
+    z-index: 5;
+}

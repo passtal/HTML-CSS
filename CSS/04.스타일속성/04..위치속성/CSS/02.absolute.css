@@ -1,0 +1,55 @@
+h1 { text-align: center; }
+
+.container {
+    position: absolute;
+    width: 600px;
+    height: 800px;
+    border: 5px dashed orange;
+    margin: auto;
+}
+
+.container div {
+    margin:  auto;
+    width: 200px;
+    height: 200px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 48px;
+    line-height: 200px;
+    border-radius: 10%;
+}
+
+/* position : absolute; */
+.container .absolute {
+    position: absolute;
+    border: 3px solid black;
+}
+
+.container base {
+    position: absolute;
+    border: 1px dashed #ddd;
+    color: #ddd;
+    z-index: -1;
+}
+
+/* absolute */
+.absolute.first { top: 0; left: 0; }
+.absolute.second { top: 0; right: 0; }
+.absolute.third { bottom: 0; left: 0; }
+.absolute.fourth { bottom: 0px; right: 0; }
+
+/* base */
+.base.first { top: 0; left: 200px; }
+.base.second { top: 200px; left: 200px; }
+.base.third { top: 400px; left: 200px; }
+.base.fourth { top: 600px; left: 200px; }
+
+/* 정가운데 */
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* top, left    : % 는 부모요소에 대한 비율 */
+    /* translate()  : % 는 해당요소에 대한 비율 */
+}

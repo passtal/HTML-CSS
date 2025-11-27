@@ -1,0 +1,64 @@
+
+.container {
+    position: relative;
+    width: 800px;
+    min-height: 500px;
+    border: 3px dashed orange;
+    margin: auto;
+}
+
+/* li : 블록요소(기본값) */
+/* display: block */
+
+li {
+    /* display: inline; */      /* width, height 적용 X */
+    display: inline-block;      /* width, height 적용 O */
+    /* inline       : 크기 X, 여백 O, 한줄 나란히 배치 */
+    /* block        : 크기 O, 여백 O, 세로로 쌓여서 배치 */
+    /* inline-block : 크기 O, 여백 O, 한줄 나란히 배치 */
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid #000;
+    padding: 10px 20px;
+    text-align: center;
+    list-style-type: none;
+}
+
+li:hover { background-color: #ddd; cursor: pointer; }
+
+/* 화면에 보이지 않게 고정 */
+.none { display: none; }
+.hidden {visibility: hidden;}
+.transparent {opacity: 0;}
+
+/* Grid 레이아웃 */
+.grid-container {
+    display: grid;
+    /* grid-template-columns: 320px 320px 320px; */
+    grid-template-columns: repeat(3, auto);
+    padding: 10px;
+    background-color: skyblue;
+}
+
+.grid-container .item {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Flex 레이아웃 */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 100px;
+    column-gap: 50px;
+}
+
+.flex-container .item {
+    width: 200px;
+}
+
+.item img {
+    width: 100%;
+}

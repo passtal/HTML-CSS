@@ -1,0 +1,21 @@
+html {
+    scroll-behavior: smooth;
+    /* 스크롤 이동 부드럽게 */
+}
+
+.floating-button {
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+    width: 60px;
+    height: 60px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+}

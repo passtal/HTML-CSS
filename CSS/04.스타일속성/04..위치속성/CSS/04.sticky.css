@@ -1,0 +1,71 @@
+h1 { text-align: center; }
+
+.container {
+    position: relative;
+    width: 600px;
+    max-width: 100%;
+    height: 3000px;
+    border: 5px dashed orange;
+    margin: 0 auto 2000px;
+}
+
+.container div {
+    /* margin: auto; */
+    width: 200px;
+    height: 200px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 48px;
+    line-height: 200px;
+    border-radius: 10%;
+}
+
+/* position : sticky; */
+.container .sticky {
+    position: sticky;
+    border: 3px solid black;
+}
+
+.container base {
+    position: sticky;
+    border: 1px dashed #ddd;
+    color: #ddd;
+    z-index: -1;
+}
+
+/* sticky */
+/* 
+    스크롤 가능한 영역 안 : relative
+    스크롤 가능한 영역 밖 : fixed
+*/
+.sticky.first { top: 100px; left: 0;}
+.sticky.second { top: 300px; left: 400px}
+.sticky.third { top: 100px; right: 400px}
+.sticky.fourth { top: 300px; right: 0;}
+
+/* base */
+.base.first { top: 0; left: 200px; }
+.base.second { top: 200px; left: 200px; }
+.base.third { top: 400px; left: 200px; }
+.base.fourth { top: 600px; left: 200px; }
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: cornflowerblue;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    line-height: 80px;
+}
+
+.box {
+    width: 800px !important;
+    max-width: 100%;
+    height: 300px !important;
+    border-radius: 0 !important;
+    background-color: royalblue;
+}
