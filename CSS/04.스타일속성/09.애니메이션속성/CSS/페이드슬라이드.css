@@ -24,6 +24,7 @@ img { width: 100%; }
     position: absolute;
     animation-duration: 16s;
     animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
 }
 
 
@@ -47,26 +48,26 @@ img { width: 100%; }
 }
 
 @keyframes slide1 {
-    0% {opacity: 1;}
-    33% {opacity: 1;}
-    36% {opacity: 0;}
+    0.333%, 1.666% {opacity: 1;}
+    33.333% {opacity: 1;}
+    36.666% {opacity: 0;}
     100% {opacity: 1;}
 }
 
 @keyframes slide2 {
     0%, 30% {opacity: 0;}
-    33% {opacity: 1;}
-    63% {opacity: 1;}
-    66% {opacity: 0;}
+    33.333% {opacity: 1;}
+    63.333% {opacity: 1;}
+    66.666% {opacity: 0;}
     100% {opacity: 0;}
 }
 
 @keyframes slide3 {
-    0%, 63% {opacity: 0;}
-    66% {opacity: 1;}
-    97% {opacity: 1;}
+    0%, 63.333% {opacity: 0;}
+    66.666% {opacity: 1;}
+    97.777% {opacity: 1;}
     100% {opacity: 0;}
 }
 
 /* 완벽하게 자연스러운 화면 전환은 CSS에서는 불가능한듯;; */
-/* ㅋㅋ 성공 */
+/* ㅋㅋ 왜 성공이지 */
