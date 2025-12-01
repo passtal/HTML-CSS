@@ -1,0 +1,25 @@
+.floating-button {
+    position: fixed;
+    bottom: 80px;
+    right: 80px;
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    color: white;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+}
+
+.floating-button a .material-symbols-outlined {
+    font-size: 110px;
+    align-items: center;
+    justify-content: center;
+    border: 100px;
+    color: coral;
+    font-weight: bold;
+}
