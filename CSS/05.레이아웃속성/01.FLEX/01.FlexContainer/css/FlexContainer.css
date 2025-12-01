@@ -59,6 +59,8 @@
     stretch
     - 적용될 item의 width/height 가 auto 여야 적용된다
 */
+.content-stretch .item { height: auto; }
+
 .content-center { align-content: center; }
 .content-start { align-content: start; }
 .content-end { align-content: end; }
