@@ -1,0 +1,71 @@
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+ul { list-style-type: none; }
+
+a { text-decoration: none; color: black; }
+
+header {
+    width: 100%;
+    height: 100px;
+    border: 1px solid black;
+}
+
+.inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1200px;
+    max-width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+/* 메뉴 */
+nav { height: 100%; }
+nav .gnb {
+    height: 100%;
+    display: flex;
+    column-gap: 32px;
+}
+
+nav .gnb li { height: 100%; }
+nav .gnb li a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+/* 유틸 */
+.util {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.btn {
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    transition: all 0.4s;
+}
+
+.btn.border:hover {
+    background-color: black;
+    color: white;
+}
+
+.btn.primary {
+    background-color: black;
+    color: white;
+}
+
+.btn.primary:hover {
+
+    background-color: coral;
+}
+
+nav a:hover {
+    font-weight: bold;
+}

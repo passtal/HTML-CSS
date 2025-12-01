@@ -1,0 +1,280 @@
+
+/* reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    min-height: 100vh;      /* vh - 픽셀의 값에 상관없이 항상 100%의 비율 유지 */
+}
+
+ul { list-style-type: none; }
+
+a { text-decoration: none; color: black; }
+
+/* 헤더 */
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* util */
+.util {
+    height: 45px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+}
+
+/* util > util-menu */
+.util .util-menu {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.util .util-menu a {
+    color: white;
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.util .util-menu li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-10px);
+}
+
+.menu {
+    position: relative;
+    height: 85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background: white;
+}
+
+/* menu > user */
+/* menu > side */
+.menu .user a,
+.menu .side a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: white;
+    font-size: 24px;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 15px rgba(255, 126, 95, 0.5);
+}
+
+.menu .user a:hover,
+.menu .side a:hover {
+    box-shadow: 0 6px 20px rgba(255, 126, 95, 1);
+    transform: translateY(-3px) scale(1.05);
+}
+
+/* menu > main-menu */
+.menu .main-menu nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.menu .main-menu nav ul li {
+    height: 50px;
+    overflow: hidden;
+}
+
+.menu .main-menu nav ul li a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 28px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #495057;
+    transition: all 0.3s ease-in;
+    position: relative;
+}
+
+/* 가로선 호버 효과 */
+.menu .main-menu nav ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+}
+
+.menu .main-menu nav ul li a:hover::before {
+    width: 80%;
+}
+
+.menu .main-menu nav ul li a:hover {
+    color: #ff7e5f;
+}
+
+/* sidebar */
+.sidebar {
+    width: 380px;
+    height: calc(100vh - 130px);
+    position: fixed;
+    top: 130px;
+    right: 0;
+    background: linear-gradient(180deg, #ffffff, #f8f9ca);
+    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.2);
+    transition: right 0.5s ease-in-out;
+    overflow: auto;
+    z-index: 99;
+}
+
+#bars:checked ~ .sidebar { right: 0; }
+
+.sidebar .sidemenu { padding: 30px 20px; }
+
+.sidebar .sidemenu li {
+    margin-bottom: 15px;
+    border-radius: 15px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease-in-out;
+}
+
+.sidebar .sidemenu li:hover {
+    box-shadow: 0 6px 25px rgba(255, 126, 95, 0.3);
+    transform: translateY(-10px);
+}
+
+.sidebar .sidemenu li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 25px;
+    position: relative;
+
+}
+
+.sidebar .sidemenu li:hover {
+    color: white;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+}
+
+.sidebar .sidemenu li a::before {
+    content: '→';
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    transform: translateY(-50%);
+    font-size: 24px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.sidebar .sidemenu li:hover a::before {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+}
+
+.sidebar .sidemenu li h3 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.sidebar .sidemenu li p {
+    font-size: 0.95rem;
+    opacity: 0.8;
+    font-weight: 600;
+}
+
+.sidebar .sidemenu li:hover h3,
+.sidebar .sidemenu li:hover p {
+    color: white;
+}
+
+/* 메뉴 아이콘 */
+.bars {
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    width: 28px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    border-radius: 3px;
+    transition: all 0.4s ease-in;
+    opacity: 1;
+}
+
+.bar.top { top: 0; left: 0; }
+
+.bar.mid {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.bar.bottom {
+    bottom: 0;
+    left: 0;
+}
+
+/* 메뉴 체크 */
+#bars:checked ~ header .bars .top {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+#bars:checked ~ header .bars .mid {
+    opacity: 0;
+    transform: translateX(20px);
+}
+
+#bars:checked ~ header .bars .bottom {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* 사이드바 활성화 */
+#bars:checked ~ .sidebar {
+    right: 0;
+}
+
+/* 오버레이 효과 */
+.sidebar::before {
+    content : '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.2);
+}

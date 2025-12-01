@@ -1,0 +1,181 @@
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background: 
+        linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+}
+
+#offcanvas-toggle { display: none; }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background: rgba(225, 225, 225, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header div {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.btn-menu {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: none;
+    height: 50px;
+    padding: 0 24px;
+    cursor: pointer;
+    background:
+        linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border-radius: 25px;
+    font-size: 1rem;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px;
+    box-shadow: 0 4px 15p rgba(102, 126, 135, 0.4);
+}
+
+.btn-menu:hover {
+    transform: translateY(-2px);
+}
+
+.btn-menu .material-icons {
+    transition: transform 0.3s ease;
+}
+
+.btn-menu:hover .material-icons {
+    transform: rotate(90deg);
+}
+
+/* 오프캔버스 */
+.offcanvas {
+    width: 350px;
+    height: 100vh;
+    position :fixed;
+    top: 0;
+    right: -350px;
+    z-index: 1000;
+    background: linear-gradient(180deg, #ffffff, #dbdbdb);
+    padding: 30px;
+    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.3);
+    transition: all 0.5s ease-in-out;
+}
+
+ul { list-style-type: none; }
+
+a { text-decoration: none; color: #212529 }
+
+nav ul {
+    display: flex;                                                                          
+    flex-direction: column;
+    gap: 10px;
+    margin: 50px 0;
+}
+
+nav ul li {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li:hover {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+nav ul li:hover a { color: white; }
+
+nav ul li a {
+    display: block;
+    width: 100%;
+    padding: 18px 20px;
+    font-weight: 500%;
+    padding: 18px 20px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* X 버튼 */
+.btn-close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: 
+        linear-gradient(135eg,#667eea, #764ba2);
+    border-radius: 50%;        
+    /* color: white; */
+    font-size: 28px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+}
+
+.btn-close:hover {
+    transform: rotate(90deg),sclae(1.1);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.5);
+}
+
+/* overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);       /* 배경도가 0인 경우, 오버레이가 안보이므로 절대 0으로 설정X */
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-in;
+    z-index: 999;
+}
+
+/* 메인 컨텐츠 */
+main { padding: 60px 30px; }
+
+main section {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    padding: 60px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+main h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+main p {
+    font-size: 1.3rem;
+    color: #495057;
+    line-height: 1.8;
+}
+
+/* 체크박스 체크시, 사이드바 보여주기 */
+#offcanvas-toggle:checked ~ .offcanvas {
+    right: 0;
+}
+
+/* 체크박스 체크시, 오버레이 보여주기 */
+#offcanvas-toggle:checked ~ .overlay {
+    opacity: 1;
+    visibility: visible;
+}
