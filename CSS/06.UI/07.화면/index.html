@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인화면</title>
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+      <!-- 유틸 -->
+      <div class="util">
+        <div class="container h-100">
+          <div class="flex m-end c-center gap-2 h-100">
+            <a href="" class="btn light">로그인</a>
+            <a href="" class="btn light">회원가입</a>
+          </div>
+        </div>
+      </div>
+      <!-- 네비게이션 -->
+      <div class="nav">
+        <div class="container h-100">
+            <div class="flex m-between c-center h-100">
+                <!-- 로고 -->
+                <a href="" class="logo flex m-center c-center gap-1 h-100">
+                    <img src="img/hero.svg" width="32" alt="로고">
+                    <span>ALOHA UI</span>
+                </a>
+                <!-- 네비게이션 -->
+                <nav class="h-100">
+                    <ul class="flex c-center gap-3 h-100">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Features</a></li>
+                        <li><a href="">Tabs</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                </nav>
+                <!-- 메뉴버튼 -->
+                <a href="" class="btn">
+                    <span class="material-icons">menu</span>
+                    <span>Menu</span>
+                </a>
+            </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="sec1">
+        <div class="container">
+            <div class="flex m-between gap-3">
+                <!-- 컨텐츠 영역 -->
+                <div class="content-box flex column m-center gap-3">
+                    <h1>세련된 UI 컴포넌트</h1>
+                    <p>오프캔버스, 탭, 플로팅 버튼 등 UI 요소들을 조합한 메인 예시입니다.
+                       깔끔한 레이아웃과 감각적인 컬러로 빠르게 시작하세요.
+                    </p>
+                    <div class="flex m-start gap-2">
+                        <a href="" class="btn primary">
+                            <span class="material-icons">bolt</span>
+                            <span>지금 살펴보기</span>
+                        </a>
+                        <a href="" class="btn primary">
+                            <span class="material-icons">tab</span>
+                            <span>탭 보기</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- 이미지 영역 -->
+                <div class="img-box">
+                    <img src="img/hero.svg" alt="이미지">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sec2">
+        <div class="container">
+            <div class="grid cols-3 gap-1">
+                <div class="card">
+                    <span class="material-icons">view_sidebar</span>
+                    <h3>오프캔버스</h3>
+                    <p>체크박스 기반으로 부드럽게 열리고 닫히는 네비게이션</p>
+                </div>
+                <div class="card">
+                    <span class="material-icons">tab</span>
+                    <h3>탭</h3>
+                    <p>라디오 버튼을 이용한 순수 CSS 탭 전환</p>
+                </div>
+                <div class="card">
+                    <span class="material-icons">add</span>
+                    <h3>플로팅 버튼</h3>
+                    <p>핵심 액션에 빠르게 접근하는 둥둥 뜨는 버튼</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sec3">
+        <div class="container">
+          <div class="tab-box">
+            <input type="radio" name="tab" id="tab1">
+            <label for="tab1" class="tab-item">Tab 1</label>
+
+            <input type="radio" name="tab" id="tab2">
+            <label for="tab2" class="tab-item">Tab 2</label>
+
+            <input type="radio" name="tab" id="tab3">
+            <label for="tab3" class="tab-item">Tab 3</label>
+
+            <div class="tab-content" id="content1">
+                <img src="img/1.jpg" alt="이미지1" width="500">
+            </div>
+            <div class="tab-content" id="content2">
+                <img src="img/2.jpg" alt="이미지2" width="500">
+            </div>
+            <div class="tab-content" id="content3">
+                <img src="img/3.jpg" alt="이미지3" width="500">
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer>
+        <div class="container h-100">
+            <div class="flex m-center c-center h-100">
+            <p class="text-center">(c) 2025 ALOHA UI. All rights reserverd.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div style="height: 2000px;"></div>
+</body>
+</html>
