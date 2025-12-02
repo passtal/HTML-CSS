@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건 연산자</title>
+    <script>
+        let name = prompt('이름을 입력하세요.')
+
+        // 조건 연산자
+        // ( 조건식 ) ? (참일때 값) : (거짓일 때 값)
+        let msg = (name == '김조은') ? '본인입니다.' : `이름은 ${name} 입니다.`
+        alert(msg)
+
+        if(name == '김조은')
+            msg = '본인이 맞습니다.'
+        else
+            msg = `당신의 이름은 ${name} 입니다.
+본인이 아닙니다!`
+        alert(msg)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

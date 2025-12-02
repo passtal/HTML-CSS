@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>else if</title>
+    <script>
+        let a = prompt('정수 입력 : ')
+        
+        // * 단일 선택
+        // if ~ elseif ~ else
+        // : 가장 먼저 만나는 조건을 만족하면, 다른 조건을 검사하지 않음
+        // 2의 배수, 3의 배수
+
+        /* if( a % 2 == 0)
+            alert('2의 배수입니다.')
+        else if( a % 3 == 0)
+            alert('3의 배수입니다.')
+        else
+            alert('2또는 3의 배수만 입력해주세요.') */
+
+        // * 다중 선택
+        // 단독 if문
+
+        if( a % 2 == 0)
+            alert('2의 배수입니다.')
+        if( a % 3 == 0)
+            alert('3의 배수입니다.')
+        if( a % 2 != 0 || a % 3 != 0)
+            alert('2또는 3의 배수만 입력해주세요.')
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
