@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>합계</title>
+    <script>
+        let arr = [1,2,3,4,5]
+
+        document.write(`합계 : ${sum(arr)}`)
+
+        // 합계를 구하는 함수
+        function sum(arr) {
+            let sum = 0
+            for(let i = 0; i < arr.length; i++) {
+                sum += arr[i]
+            }
+            return sum
+        }
+
+        // 선언적 함수 정의
+        // 함수 정의가 함수 호출보다 뒤에 있어도 호출 가능
+        // hoisting (호이스팅)
+        // 변수나 함수 정의가 scope 최상단으로 끌어다지는것
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

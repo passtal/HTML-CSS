@@ -193,12 +193,16 @@ body {
 }
 
 .tab-section {
+    width: 100%;
     background-color: white;
     padding: 40px 40px 0;
+    margin: 0 auto;
     margin-top: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    /* overflow: hidden; */
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
 }
 
 .tab-controls {

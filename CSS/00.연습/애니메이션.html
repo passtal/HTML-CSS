@@ -1,0 +1,55 @@
+<!-- animation-@@@
+    duration  
+    → 지속시간 설정? ... ex) 1s 2s 3s ...
+    name    
+    → 이름 정의 ... ex) slide // 이후에 얘한테 효과주고 싶으면 .slide 이런식으로 css에서 지정
+    timing-function     
+    → 속도 곡선 설정 ... ex) ease / in / out / in-out
+    dalay
+    → 시작 전 지연시간 설정
+    iteration-count
+    → 반복 횟수 설정
+    direction
+    → 진행 방향 설정 ... alternate가 잇네..
+    fill-mode
+    → 애니메이션 종료 후 요소의 스타일을 설정 ... forwards?
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션 속성 예시</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: white;
+        }
+
+        /* 애니메이션 정의 */
+        @keyframes slide {
+            0%   {transform: translateX(0), translateY(0);}
+            33%  {transform: translateX(300px);}
+            66%  {transform: translateX(150px), translateY(150px);}
+            100% {transform: translateX(0), translateY(0);}
+        }
+
+        /* 애니메이션 적용 */
+        .animation-example {
+            width: 150px;
+            height: 150px;
+            background-color: lightcoral;
+            margin: 20px auto;
+            display: inline-block;
+            animation: slide 1s ease-in-out 3s infinite alternate;
+        }
+    </style>
+</head>
+<body>
+    <div class="animation-example"></div>    
+</body>
+</html>

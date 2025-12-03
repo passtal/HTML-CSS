@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>let으로 인스턴스 만들기</title>
+    <script>
+        class Car {
+            // 생성자 함수 : 인스턴스가 생성될 때 실행됨
+            // 첫글자는 대문자 (관례)
+            // 각 인스턴스들은 서로 다른 값을 가질 수 있다
+            constructor(make, model, year) {
+                this.make = make;
+                this.model = model;
+                this.year = year;
+            }
+
+            // 메서드
+            getDescription() {
+                return `${this.year}년식 ${this.make}의 ${this.model} 입니다.`
+            }
+        }
+
+        let myCar = new Car("Kia", "K5", 2024)
+        let anotherCar = new Car("Hyundai", "Sonata", 2023)
+
+        console.log(myCar.make)
+        console.log(anotherCar.getDescription())
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

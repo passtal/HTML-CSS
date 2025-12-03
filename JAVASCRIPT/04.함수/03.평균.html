@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>평균</title>
+    <script>
+        let arr = [1,2,5]
+
+        document.write(`<h1>합계 : ${sum(arr)}</h1>`)
+
+        function sum(arr) {
+            let sum = arr.reduce((합계, 현재값) => 합계 + 현재값)
+            return sum
+        }
+
+        document.write(`<h1>평균 : ${avg(arr).toFixed(2)}</h1>`)
+        // Number.toFixed(자리수)
+        // 소수점을 지정한 자리수만 나타내어 반환하는 함수
+
+        function avg(arr) {
+            let avg = 0.0
+            avg = sum(arr) / arr.length
+            return avg
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

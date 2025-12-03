@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <script>
+
+        // getElement - 함수 사용하기
+        // 어떤 선택자를 사용하냐에 따라 함수도 달라짐
+        document.getElementById("id명")
+        document.getElementsByClassName("class명")
+        document.getElementsByTagName("태그명")
+
+        // 변수 할당하기
+        let heading = document.getElementById('heading')            // id 선택자 사용
+        let bright = document.getElementsByClassName('bright')      // 클래스 선택자 사용 
+        let images = document.getElementsByTagName('img')           // 타입 선택자 사용
+
+        /* → class 선택자나 타입 선택자는 한 문서 안에서 여러 번 사용할 수 있다
+           → 따라서 해당 선택자는 함수에서 반환하는 값이 2개 이상일 수 있다 (error x)
+           → 이 값들은 배열은 아니지만 배열처럼 인덱스를 이용해 각각의 값을 사용할 수 있다
+         */
+
+         
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
