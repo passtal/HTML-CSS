@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>댓글 목록</title>
+    <style>
+
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: "Pretendard", sans-serif;
+            background: #f4f6f6;
+            color: #333;
+        }
+
+        .card {
+            border: 1px solid #eee;
+            padding: 10px;
+            margin-bottom: 8px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,1.0,1.0);
+            background-color: #f9f9f9;
+        }
+        .writer-name {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>댓글 목록</h2>
+        <div id="commentList"></div>
+        <hr>
+        <h2 id="inputComment">댓글 작성</h2>
+        <input type="text" id="writer" placeholder="이름">
+        <input type="text" id="content" placeholder="내용을 작성해주세요.">
+        <button id="submit">작성</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const writerInput = document.getElementById('writer');
+            const contentInput = document.getElementById('content');
+            const commentList = document.getElementById('commentList');
+            const submitButton = document.getElementById('submit');
+
+            submitButton.addEventListener("click", () => {
+                const nameValue = writerInput.value.trim(); 
+                const contentValue = contentInput.value.trim();                
+                const card = `
+                    <div class="card">
+                        <span class="writer-name">${nameValue}</span>
+                        <p>${contentValue}</p>
+                    </div>
+                `;                
+                commentList.innerHTML += card;
+
+                writerInput.value = '';
+                contentInput.value = '';
+
+                // 날짜
+                // const today = new Date()
+                // const date = today.toISOString(.slice(0,10) // 2025-04-18
+            });
+        });
+    </script>
+</body>
+</html>

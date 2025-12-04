@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소 접근</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let $container = document.getElementsByClassName("container")[0]
+
+            // childNodes : 해당 요소의 자식 노드들
+            console.log($container.childNodes)
+            console.log($container.childNodes[1])   // 주석 노드
+            console.log($container.childNodes[3])   // ul.list
+            console.log($container.childNodes[5])   // section
+
+            let section = document.getElementsByTagName("section")[0]
+                console.log($section.fisrtChild)        // 첫번째 자식
+                console.log($section.childNodes[1])     // index 1번 자식
+                console.log($section.lastChild)         // 마지막 자식
+
+                console.log($section.childNodes[1].previousSibling)     // 이전노드
+                console.log($section.childNodes[1].nextsSibling)        // 다음노드
+
+                // -----------------------------------------------------------------
+                let item1 = document.getElementById("item1")
+
+                console.log(item.nodeName)
+                console.log('class : ' + item1.attributes[0].nodeValue)
+                console.log(item1.nodeValue)
+                console.log(item1.firstChild.nodeValue)
+                console.log(item1.nodeType)
+                console.log(item1,lastChild.firstChild.nodeType)
+                console.log(item1.parentNode)
+                // nodeType
+                // 요소 속성 텍스트
+        })
+    </script>
+</head>
+<body>
+    <div class="container"></div>
+    <!-- ul.list>((li>a{리스트$}*4)) -->
+     <ul class="list">
+        <li><a href="">리스트1</a></li>
+        <li><a href="">리스트2</a></li>
+        <li><a href="">리스트3</a></li>
+        <li><a href="">리스트4</a></li>
+     </ul>
+     <section>
+        <img src="" alt="이미지1">
+        <img src="" alt="이미지2">
+        <img src="" alt="이미지3">
+     </section>
+     <section>
+        <div class="item" id="itme1">아이템1<span>추가요소</span></div>
+        <div class="item" id="itme2">아이템2</div>
+        <div class="item" id="itme3">아이템3</div>
+        <div class="item" id="itme4">아이템4</div>
+     </section>
+</body>
+</html>
