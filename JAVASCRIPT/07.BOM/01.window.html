@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window</title>
+    <script>
+        /* 윈도우 창의 크기 */
+        document.writeln(`윈도우 가로 : ${window.innerWidth} <br>`)
+        document.writeln(`윈도우 세로 : ${window.innerHeight} <br>`)
+        document.writeln(`윈도우 가로 : ${window.outerWidth} <br>`)
+        document.writeln(`윈도우 세로 : ${window.outerHeight} <br>`)
+        console.log(window.innerWidth);
+        console.log(window.innerHeight);
+
+        // 팝업창
+        // window.open('URL', 팝업창이름, 옵션)
+
+        let option = {width: 400, height: 600}
+        let optionObj = Object.entries(option).map(([key,value]) => 
+            `${key} = ${value}`
+        ).join(",")
+        // { a: 1, b: 2 } → a = 1 / b = 2
+
+        let popup = window.open('./popup.html', '팝업창', optionObj)
+        // let popup = window.open('http://알클.com', '팝업창', optionObj)
+        // let popup = window.open('http://알클.com', '팝업창', 'width=400, height=600')
+
+        // 문서  준비 이벤트
+        document.addEventListener("DOMContentLoaded", () => {
+            // 팝업 닫기 버튼 클릭
+            let btn = document.getElementById("btn")
+            btn.addEventListener("click", () => {
+                popup.close()   // 팝업창 닫기
+            })
+            // 스크롤 이벤트
+            window.addEventListener("scroll", (event) => {
+                let scrollY = window.scrollY    // 세로방향 스크롤 위치
+                let $scrollY = document.getElementById("scrollY")
+                $scrollY.textContent = scrollY
+                $scrollY.style.position = 'fixed'
+                $scrollY.style.top = '0'
+                console.log(`scrollY : ${scrollY}`);
+
+                // 스크롤 맨 아래 위치 확인
+                // 1. html 전체 높이    : 약 5000px
+                let docHeight = document.documentElement.scrollHeight
+                console.log(`docHeight(html 높이) : ${docHeight}`);
+
+                // 2. window의 높이     : 약 1000px
+                let winHeight = window.innerHeight
+                console.log(`winHeight(윈도우 높이) : ${winHeight}`);
+
+                // scrolly : 5000px-win높이 = 4564
+                if (winHeight + scrollY >= docHeight) {
+                    alert ("스크롤 마지막입니다.")
+                    // infinite scroll
+                    // → 추가로 새로운 컨텐츠를 가져오는 UI
+                }
+
+                // 맨위로 가기
+                let $top = document.getElementById("top")
+                $top.addEventListener("click", () => {
+                    // scrollTo(가로위치, 세로위치) : 지정한 스크롤 위치로 이동
+                    window.scrollTo(0, 0)
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <button id="btn">팝업 닫기</button>
+    <h3>스크롤 위치 : <span id="scrollY"></span></h3>
+    <div style="height: 5000px;"></div>
+    <button id="top">맨 위로 가기</button>
+
+    
+</body>
+</html>

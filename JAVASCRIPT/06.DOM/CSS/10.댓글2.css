@@ -1,0 +1,49 @@
+
+#comment {
+    margin: 50px auto;
+}
+
+.commment-list {
+    border: 1px solid cornflowerblue;
+    min-width: 480px;
+}
+
+.comment-card {
+    padding: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.comment-card .title {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    row-gap: 10px;
+    min-width: 480px;
+}
+
+input, textarea {
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+}
+
+#commentBtn {
+    background-color: transparent;
+    border: 1px solid royalblue;
+    color: royalblue;
+    padding: 6px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+}
+
+#commentBtn:hover {
+    background-color: royalblue;
+    color: white;
+}
