@@ -3,7 +3,7 @@ $(function() {
     const time = 3000               /* 자동 슬라이드 시간 */
     const $slide = $('.slide')       /* 개별 슬라이드 */
     const $container = $('.slide-container')     /* 슬라이드 컨테이너 */
-    const size = $slide.height()    /* 한 슬라이드 사이즈 */
+    const size = $slide.height()    /* 한 슬라이드 사이즈 - 세로슬라이드:height()*/
     const count = $slide.length     /* 슬라이드 개수 */
 
     $container.height(size*count)   /* 컨테이너 사이즈 지정 */

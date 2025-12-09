@@ -3,10 +3,10 @@ $(function() {                      /* html 준비가 되면 실행 */
     const time = 3000               /* 자동 슬라이드 시간 (ms) */
     const $slide = $('.slide')      /* 개별 슬라이드 요소 */
     const $container = $('.slide-container')    /* 슬라이드 컨테이너 */
-    const size = $slide.width()     /* 한 슬라이드 사이즈 */
+    const size = $slide.width()     /* 한 슬라이드 사이즈 - 가로 슬라이드:width() */
     const count = $slide.length     /* 슬라이드 개수 */
 
-    $container.width(size*count)    /* 컨테이너 사이즈 지정 */
+    $container.width(size*count)    /* 컨테이너 사이즈 지정 */ 
 
     setInterval(function() {        /* time(3초) 마다 타이머 실행 */
         $container.animate({        /* 애니메이션 */

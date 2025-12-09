@@ -1,6 +1,13 @@
+/* html에서 설정한 요소명을 정확히 파악할 것 */
+/* id는 앞에 #을 붙여줄 것 */
+/* #slides */
+/* .slide-container */
+/* .slide-container .slide */
+/* .slide-container .slide img */
+
 
 #slides {
-    width: 1200px;
+    width: 1200px;      
     height: 600px;
     overflow: hidden;
 }
